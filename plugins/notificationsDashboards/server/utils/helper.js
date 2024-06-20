@@ -1,0 +1,19 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.joinRequestParams = void 0;
+
+/*
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+const joinRequestParams = queryParams => {
+  if (Array.isArray(queryParams)) return queryParams.join(',');
+  if (typeof queryParams === 'string') return queryParams;
+  return '';
+};
+
+exports.joinRequestParams = joinRequestParams;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImhlbHBlci50cyJdLCJuYW1lcyI6WyJqb2luUmVxdWVzdFBhcmFtcyIsInF1ZXJ5UGFyYW1zIiwiQXJyYXkiLCJpc0FycmF5Iiwiam9pbiJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBRU8sTUFBTUEsaUJBQWlCLEdBQzVCQyxXQUQrQixJQUU1QjtBQUNILE1BQUlDLEtBQUssQ0FBQ0MsT0FBTixDQUFjRixXQUFkLENBQUosRUFBZ0MsT0FBT0EsV0FBVyxDQUFDRyxJQUFaLENBQWlCLEdBQWpCLENBQVA7QUFDaEMsTUFBSSxPQUFPSCxXQUFQLEtBQXVCLFFBQTNCLEVBQXFDLE9BQU9BLFdBQVA7QUFDckMsU0FBTyxFQUFQO0FBQ0QsQ0FOTSIsInNvdXJjZXNDb250ZW50IjpbIi8qXG4gKiBDb3B5cmlnaHQgT3BlblNlYXJjaCBDb250cmlidXRvcnNcbiAqIFNQRFgtTGljZW5zZS1JZGVudGlmaWVyOiBBcGFjaGUtMi4wXG4gKi9cblxuZXhwb3J0IGNvbnN0IGpvaW5SZXF1ZXN0UGFyYW1zID0gKFxuICBxdWVyeVBhcmFtczogc3RyaW5nIHwgc3RyaW5nW10gfCB1bmRlZmluZWRcbikgPT4ge1xuICBpZiAoQXJyYXkuaXNBcnJheShxdWVyeVBhcmFtcykpIHJldHVybiBxdWVyeVBhcmFtcy5qb2luKCcsJyk7XG4gIGlmICh0eXBlb2YgcXVlcnlQYXJhbXMgPT09ICdzdHJpbmcnKSByZXR1cm4gcXVlcnlQYXJhbXM7XG4gIHJldHVybiAnJztcbn07XG4iXX0=

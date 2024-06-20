@@ -1,0 +1,12 @@
+{"date":"2024-04-29T06:33:59.059Z","level":"info","location":"initialize","message":"Wazuh dashboard index: .kibana"}
+{"date":"2024-04-29T06:33:59.060Z","level":"info","location":"initialize","message":"App revision: 02"}
+{"date":"2024-04-29T06:33:59.060Z","level":"info","location":"initialize","message":"Total RAM: 7895MB"}
+{"date":"2024-06-10T02:15:02.971Z","level":"info","location":"initialize","message":"Wazuh dashboard index: .kibana"}
+{"date":"2024-06-10T02:15:02.971Z","level":"info","location":"initialize","message":"App revision: 02"}
+{"date":"2024-06-10T02:15:02.972Z","level":"info","location":"initialize","message":"Total RAM: 7895MB"}
+{"date":"2024-06-18T12:19:11.720Z","level":"info","location":"initialize","message":"Wazuh dashboard index: .kibana"}
+{"date":"2024-06-18T12:19:11.721Z","level":"info","location":"initialize","message":"App revision: 02"}
+{"date":"2024-06-18T12:19:11.721Z","level":"info","location":"initialize","message":"Total RAM: 7895MB"}
+{"date":"2024-06-18T18:38:16.989Z","level":"info","location":"initialize","message":"Wazuh dashboard index: .kibana"}
+{"date":"2024-06-18T18:38:16.990Z","level":"info","location":"initialize","message":"App revision: 02"}
+{"date":"2024-06-18T18:38:16.991Z","level":"info","location":"initialize","message":"Total RAM: 7895MB"}

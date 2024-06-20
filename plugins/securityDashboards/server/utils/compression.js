@@ -1,0 +1,38 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.deflateValue = deflateValue;
+exports.inflateValue = inflateValue;
+
+var _nodeZlib = _interopRequireDefault(require("node:zlib"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ *   Copyright OpenSearch Contributors
+ *
+ *   Licensed under the Apache License, Version 2.0 (the "License").
+ *   You may not use this file except in compliance with the License.
+ *   A copy of the License is located at
+ *
+ *       http://www.apache.org/licenses/LICENSE-2.0
+ *
+ *   or in the "license" file accompanying this file. This file is distributed
+ *   on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ *   express or implied. See the License for the specific language governing
+ *   permissions and limitations under the License.
+ */
+function deflateValue(value, options = {}) {
+  const compressedBuffer = _nodeZlib.default.deflateSync(value, options);
+
+  return compressedBuffer;
+}
+
+function inflateValue(value, options = {}) {
+  const uncompressedBuffer = _nodeZlib.default.inflateSync(value, options);
+
+  return uncompressedBuffer;
+}
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXByZXNzaW9uLnRzIl0sIm5hbWVzIjpbImRlZmxhdGVWYWx1ZSIsInZhbHVlIiwib3B0aW9ucyIsImNvbXByZXNzZWRCdWZmZXIiLCJ6bGliIiwiZGVmbGF0ZVN5bmMiLCJpbmZsYXRlVmFsdWUiLCJ1bmNvbXByZXNzZWRCdWZmZXIiLCJpbmZsYXRlU3luYyJdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7QUFlQTs7OztBQWZBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFDQTtBQUNBO0FBQ0E7QUFJTyxTQUFTQSxZQUFULENBQXNCQyxLQUF0QixFQUFxQ0MsT0FBb0IsR0FBRyxFQUE1RCxFQUF3RTtBQUM3RSxRQUFNQyxnQkFBd0IsR0FBR0Msa0JBQUtDLFdBQUwsQ0FBaUJKLEtBQWpCLEVBQXdCQyxPQUF4QixDQUFqQzs7QUFFQSxTQUFPQyxnQkFBUDtBQUNEOztBQUVNLFNBQVNHLFlBQVQsQ0FBc0JMLEtBQXRCLEVBQXFDQyxPQUFvQixHQUFHLEVBQTVELEVBQXdFO0FBQzdFLFFBQU1LLGtCQUEwQixHQUFHSCxrQkFBS0ksV0FBTCxDQUFpQlAsS0FBakIsRUFBd0JDLE9BQXhCLENBQW5DOztBQUVBLFNBQU9LLGtCQUFQO0FBQ0QiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogICBDb3B5cmlnaHQgT3BlblNlYXJjaCBDb250cmlidXRvcnNcbiAqXG4gKiAgIExpY2Vuc2VkIHVuZGVyIHRoZSBBcGFjaGUgTGljZW5zZSwgVmVyc2lvbiAyLjAgKHRoZSBcIkxpY2Vuc2VcIikuXG4gKiAgIFlvdSBtYXkgbm90IHVzZSB0aGlzIGZpbGUgZXhjZXB0IGluIGNvbXBsaWFuY2Ugd2l0aCB0aGUgTGljZW5zZS5cbiAqICAgQSBjb3B5IG9mIHRoZSBMaWNlbnNlIGlzIGxvY2F0ZWQgYXRcbiAqXG4gKiAgICAgICBodHRwOi8vd3d3LmFwYWNoZS5vcmcvbGljZW5zZXMvTElDRU5TRS0yLjBcbiAqXG4gKiAgIG9yIGluIHRoZSBcImxpY2Vuc2VcIiBmaWxlIGFjY29tcGFueWluZyB0aGlzIGZpbGUuIFRoaXMgZmlsZSBpcyBkaXN0cmlidXRlZFxuICogICBvbiBhbiBcIkFTIElTXCIgQkFTSVMsIFdJVEhPVVQgV0FSUkFOVElFUyBPUiBDT05ESVRJT05TIE9GIEFOWSBLSU5ELCBlaXRoZXJcbiAqICAgZXhwcmVzcyBvciBpbXBsaWVkLiBTZWUgdGhlIExpY2Vuc2UgZm9yIHRoZSBzcGVjaWZpYyBsYW5ndWFnZSBnb3Zlcm5pbmdcbiAqICAgcGVybWlzc2lvbnMgYW5kIGxpbWl0YXRpb25zIHVuZGVyIHRoZSBMaWNlbnNlLlxuICovXG5cbmltcG9ydCB6bGliLCB7IFpsaWJPcHRpb25zIH0gZnJvbSAnbm9kZTp6bGliJztcblxuZXhwb3J0IGZ1bmN0aW9uIGRlZmxhdGVWYWx1ZSh2YWx1ZTogc3RyaW5nLCBvcHRpb25zOiBabGliT3B0aW9ucyA9IHt9KTogQnVmZmVyIHtcbiAgY29uc3QgY29tcHJlc3NlZEJ1ZmZlcjogQnVmZmVyID0gemxpYi5kZWZsYXRlU3luYyh2YWx1ZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIGNvbXByZXNzZWRCdWZmZXI7XG59XG5cbmV4cG9ydCBmdW5jdGlvbiBpbmZsYXRlVmFsdWUodmFsdWU6IEJ1ZmZlciwgb3B0aW9uczogWmxpYk9wdGlvbnMgPSB7fSk6IEJ1ZmZlciB7XG4gIGNvbnN0IHVuY29tcHJlc3NlZEJ1ZmZlcjogQnVmZmVyID0gemxpYi5pbmZsYXRlU3luYyh2YWx1ZSwgb3B0aW9ucyk7XG5cbiAgcmV0dXJuIHVuY29tcHJlc3NlZEJ1ZmZlcjtcbn1cbiJdfQ==

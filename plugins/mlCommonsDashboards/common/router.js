@@ -1,0 +1,22 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.ROUTES = void 0;
+
+var _monitoring = require("../public/components/monitoring");
+
+var _router_paths = require("./router_paths");
+
+/*
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+const ROUTES = [{
+  path: _router_paths.routerPaths.overview,
+  Component: _monitoring.Monitoring,
+  label: 'Overview'
+}];
+exports.ROUTES = ROUTES;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlci50cyJdLCJuYW1lcyI6WyJST1VURVMiLCJwYXRoIiwicm91dGVyUGF0aHMiLCJvdmVydmlldyIsIkNvbXBvbmVudCIsIk1vbml0b3JpbmciLCJsYWJlbCJdLCJtYXBwaW5ncyI6Ijs7Ozs7OztBQUtBOztBQUNBOztBQU5BO0FBQ0E7QUFDQTtBQUNBO0FBWU8sTUFBTUEsTUFBcUIsR0FBRyxDQUNuQztBQUNFQyxFQUFBQSxJQUFJLEVBQUVDLDBCQUFZQyxRQURwQjtBQUVFQyxFQUFBQSxTQUFTLEVBQUVDLHNCQUZiO0FBR0VDLEVBQUFBLEtBQUssRUFBRTtBQUhULENBRG1DLENBQTlCIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIENvcHlyaWdodCBPcGVuU2VhcmNoIENvbnRyaWJ1dG9yc1xuICogU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IEFwYWNoZS0yLjBcbiAqL1xuXG5pbXBvcnQgeyBNb25pdG9yaW5nIH0gZnJvbSAnLi4vcHVibGljL2NvbXBvbmVudHMvbW9uaXRvcmluZyc7XG5pbXBvcnQgeyByb3V0ZXJQYXRocyB9IGZyb20gJy4vcm91dGVyX3BhdGhzJztcblxuaW50ZXJmYWNlIFJvdXRlQ29uZmlnIHtcbiAgcGF0aDogc3RyaW5nO1xuICBDb21wb25lbnQ6IFJlYWN0LkNvbXBvbmVudFR5cGU8YW55PjtcbiAgbGFiZWw6IHN0cmluZztcbiAgZXhhY3Q/OiBib29sZWFuO1xufVxuXG5leHBvcnQgY29uc3QgUk9VVEVTOiBSb3V0ZUNvbmZpZ1tdID0gW1xuICB7XG4gICAgcGF0aDogcm91dGVyUGF0aHMub3ZlcnZpZXcsXG4gICAgQ29tcG9uZW50OiBNb25pdG9yaW5nLFxuICAgIGxhYmVsOiAnT3ZlcnZpZXcnLFxuICB9LFxuXTtcbiJdfQ==

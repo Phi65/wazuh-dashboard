@@ -1,0 +1,9 @@
+{
+  "id": "devTools",
+  "version": "opensearchDashboards",
+  "server": false,
+  "ui": true,
+  "optionalPlugins": ["dataSource"],
+  "requiredPlugins": ["urlForwarding"],
+  "requiredBundles": ["dataSourceManagement"]
+}

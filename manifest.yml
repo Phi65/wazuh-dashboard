@@ -1,0 +1,85 @@
+---
+schema-version: '1.1'
+build:
+  name: OpenSearch Dashboards
+  version: 2.8.0
+  platform: linux
+  architecture: x64
+  distribution: tar
+  location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/dist/opensearch-dashboards/opensearch-dashboards-2.8.0-linux-x64.tar.gz
+  id: '6182'
+components:
+  - name: OpenSearch-Dashboards
+    repository: https://github.com/opensearch-project/OpenSearch-Dashboards.git
+    ref: 8bd48f16ad37a5dfa805234223e4d5bffa926abe
+    commit_id: 8bd48f16ad37a5dfa805234223e4d5bffa926abe
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/dist/opensearch-dashboards-min-2.8.0-linux-x64.tar.gz
+  - name: functionalTestDashboards
+    repository: https://github.com/opensearch-project/opensearch-dashboards-functional-test.git
+    ref: afbf19a0ca72ccc6d362f8e73dbe901063999289
+    commit_id: afbf19a0ca72ccc6d362f8e73dbe901063999289
+  - name: observabilityDashboards
+    repository: https://github.com/opensearch-project/dashboards-observability.git
+    ref: 4f8484a7f4cd436db1c5f0f82ee20f817b5433dd
+    commit_id: 4f8484a7f4cd436db1c5f0f82ee20f817b5433dd
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/observabilityDashboards-2.8.0.zip
+  - name: reportsDashboards
+    repository: https://github.com/opensearch-project/dashboards-reporting.git
+    ref: 75205dba4bc1668f6706e40efbfcd7cd875676ae
+    commit_id: 75205dba4bc1668f6706e40efbfcd7cd875676ae
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/reportsDashboards-2.8.0.zip
+  - name: ganttChartDashboards
+    repository: https://github.com/opensearch-project/dashboards-visualizations.git
+    ref: c1f2dbf660d62a6b742c89927a3e8af6ad5f1eda
+    commit_id: c1f2dbf660d62a6b742c89927a3e8af6ad5f1eda
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/ganttChartDashboards-2.8.0.zip
+  - name: queryWorkbenchDashboards
+    repository: https://github.com/opensearch-project/dashboards-query-workbench.git
+    ref: a3c8b8791ca53165f7d798cf3c1835a487369c48
+    commit_id: a3c8b8791ca53165f7d798cf3c1835a487369c48
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/queryWorkbenchDashboards-2.8.0.zip
+  - name: customImportMapDashboards
+    repository: https://github.com/opensearch-project/dashboards-maps.git
+    ref: 0d976e7a8da11282a600e5e9780f464dab70475c
+    commit_id: 0d976e7a8da11282a600e5e9780f464dab70475c
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/customImportMapDashboards-2.8.0.zip
+  - name: anomalyDetectionDashboards
+    repository: https://github.com/opensearch-project/anomaly-detection-dashboards-plugin
+    ref: 56ee83042d77b61ee600f6df7675445c10e3c964
+    commit_id: 56ee83042d77b61ee600f6df7675445c10e3c964
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/anomalyDetectionDashboards-2.8.0.zip
+  - name: mlCommonsDashboards
+    repository: https://github.com/opensearch-project/ml-commons-dashboards.git
+    ref: 95ce3543148b6cb5d1be9d70d6b787539feda6be
+    commit_id: 95ce3543148b6cb5d1be9d70d6b787539feda6be
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/mlCommonsDashboards-2.8.0.zip
+  - name: indexManagementDashboards
+    repository: https://github.com/opensearch-project/index-management-dashboards-plugin.git
+    ref: c9294e604884eb742a5b891562a8add212d86d70
+    commit_id: c9294e604884eb742a5b891562a8add212d86d70
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/indexManagementDashboards-2.8.0.zip
+  - name: notificationsDashboards
+    repository: https://github.com/opensearch-project/dashboards-notifications.git
+    ref: d369cfb77cf31a5007f81192717140ee7717ce6f
+    commit_id: d369cfb77cf31a5007f81192717140ee7717ce6f
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/notificationsDashboards-2.8.0.zip
+  - name: alertingDashboards
+    repository: https://github.com/opensearch-project/alerting-dashboards-plugin.git
+    ref: 9af360d7d68443068eb1f5a4a834504b51487b9b
+    commit_id: 9af360d7d68443068eb1f5a4a834504b51487b9b
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/alertingDashboards-2.8.0.zip
+  - name: securityAnalyticsDashboards
+    repository: https://github.com/opensearch-project/security-analytics-dashboards-plugin.git
+    ref: d9ca756263a6412b0efcc78e95e72f822401104a
+    commit_id: d9ca756263a6412b0efcc78e95e72f822401104a
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/securityAnalyticsDashboards-2.8.0.zip
+  - name: securityDashboards
+    repository: https://github.com/opensearch-project/security-dashboards-plugin.git
+    ref: ae083f97337dbe865d10e7d11897d2ab5c2f8afc
+    commit_id: ae083f97337dbe865d10e7d11897d2ab5c2f8afc
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/securityDashboards-2.8.0.zip
+  - name: searchRelevanceDashboards
+    repository: https://github.com/opensearch-project/dashboards-search-relevance.git
+    ref: 88bba5faed5f8a6e49b68cd9f403121e8fd87bb6
+    commit_id: 88bba5faed5f8a6e49b68cd9f403121e8fd87bb6
+    location: https://ci.opensearch.org/ci/dbc/distribution-build-opensearch-dashboards/2.8.0/6182/linux/x64/tar/builds/opensearch-dashboards/plugins/searchRelevanceDashboards-2.8.0.zip

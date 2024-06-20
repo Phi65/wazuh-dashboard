@@ -1,0 +1,28 @@
+"use strict";
+
+/*
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+process.env.TZ = 'UTC';
+module.exports = {
+  rootDir: '../',
+  setupFiles: ['<rootDir>/test/polyfills.js', '<rootDir>/test/setupTests.js', '<rootDir>/test/enzyme.js'],
+  setupFilesAfterEnv: ['<rootDir>/test/setup.jest.js'],
+  modulePaths: ['node_modules', `../../node_modules`],
+  coverageDirectory: './coverage',
+  moduleNameMapper: {
+    '\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$': '<rootDir>/test/mocks/styleMock.js',
+    '\\.(css|less|scss)$': '<rootDir>/test/mocks/styleMock.js',
+    '^ui/(.*)': '<rootDir>/../../src/legacy/ui/public/$1/'
+  },
+  snapshotSerializers: ['../../node_modules/enzyme-to-json/serializer'],
+  coverageReporters: ['lcov', 'text', 'cobertura'],
+  testMatch: ['**/*.test.js', '**/*.test.ts', '**/*.test.tsx'],
+  coveragePathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/node_modules/', '<rootDir>/test/'],
+  clearMocks: true,
+  testPathIgnorePatterns: ['<rootDir>/build/', '<rootDir>/node_modules/'],
+  modulePathIgnorePatterns: [],
+  testEnvironment: 'jest-environment-jsdom'
+};
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImplc3QuY29uZmlnLmpzIl0sIm5hbWVzIjpbInByb2Nlc3MiLCJlbnYiLCJUWiIsIm1vZHVsZSIsImV4cG9ydHMiLCJyb290RGlyIiwic2V0dXBGaWxlcyIsInNldHVwRmlsZXNBZnRlckVudiIsIm1vZHVsZVBhdGhzIiwiY292ZXJhZ2VEaXJlY3RvcnkiLCJtb2R1bGVOYW1lTWFwcGVyIiwic25hcHNob3RTZXJpYWxpemVycyIsImNvdmVyYWdlUmVwb3J0ZXJzIiwidGVzdE1hdGNoIiwiY292ZXJhZ2VQYXRoSWdub3JlUGF0dGVybnMiLCJjbGVhck1vY2tzIiwidGVzdFBhdGhJZ25vcmVQYXR0ZXJucyIsIm1vZHVsZVBhdGhJZ25vcmVQYXR0ZXJucyIsInRlc3RFbnZpcm9ubWVudCJdLCJtYXBwaW5ncyI6Ijs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUNBQSxPQUFPLENBQUNDLEdBQVIsQ0FBWUMsRUFBWixHQUFpQixLQUFqQjtBQUNBQyxNQUFNLENBQUNDLE9BQVAsR0FBaUI7QUFDZkMsRUFBQUEsT0FBTyxFQUFFLEtBRE07QUFFZkMsRUFBQUEsVUFBVSxFQUFFLENBQ1YsNkJBRFUsRUFFViw4QkFGVSxFQUdWLDBCQUhVLENBRkc7QUFPZkMsRUFBQUEsa0JBQWtCLEVBQUUsQ0FBQyw4QkFBRCxDQVBMO0FBUWZDLEVBQUFBLFdBQVcsRUFBRSxDQUFDLGNBQUQsRUFBa0Isb0JBQWxCLENBUkU7QUFTZkMsRUFBQUEsaUJBQWlCLEVBQUUsWUFUSjtBQVVmQyxFQUFBQSxnQkFBZ0IsRUFBRTtBQUNoQiwyRkFDRSxtQ0FGYztBQUdoQiwyQkFBdUIsbUNBSFA7QUFJaEIsZ0JBQVk7QUFKSSxHQVZIO0FBZ0JmQyxFQUFBQSxtQkFBbUIsRUFBRSxDQUFDLDhDQUFELENBaEJOO0FBaUJmQyxFQUFBQSxpQkFBaUIsRUFBRSxDQUFDLE1BQUQsRUFBUyxNQUFULEVBQWlCLFdBQWpCLENBakJKO0FBa0JmQyxFQUFBQSxTQUFTLEVBQUUsQ0FBQyxjQUFELEVBQWlCLGNBQWpCLEVBQWlDLGVBQWpDLENBbEJJO0FBbUJmQyxFQUFBQSwwQkFBMEIsRUFBRSxDQUFDLGtCQUFELEVBQXFCLHlCQUFyQixFQUFnRCxpQkFBaEQsQ0FuQmI7QUFvQmZDLEVBQUFBLFVBQVUsRUFBRSxJQXBCRztBQXFCZkMsRUFBQUEsc0JBQXNCLEVBQUUsQ0FBQyxrQkFBRCxFQUFxQix5QkFBckIsQ0FyQlQ7QUFzQmZDLEVBQUFBLHdCQUF3QixFQUFFLEVBdEJYO0FBdUJmQyxFQUFBQSxlQUFlLEVBQUU7QUF2QkYsQ0FBakIiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogQ29weXJpZ2h0IE9wZW5TZWFyY2ggQ29udHJpYnV0b3JzXG4gKiBTUERYLUxpY2Vuc2UtSWRlbnRpZmllcjogQXBhY2hlLTIuMFxuICovXG5wcm9jZXNzLmVudi5UWiA9ICdVVEMnO1xubW9kdWxlLmV4cG9ydHMgPSB7XG4gIHJvb3REaXI6ICcuLi8nLFxuICBzZXR1cEZpbGVzOiBbXG4gICAgJzxyb290RGlyPi90ZXN0L3BvbHlmaWxscy5qcycsXG4gICAgJzxyb290RGlyPi90ZXN0L3NldHVwVGVzdHMuanMnLFxuICAgICc8cm9vdERpcj4vdGVzdC9lbnp5bWUuanMnLFxuICBdLFxuICBzZXR1cEZpbGVzQWZ0ZXJFbnY6IFsnPHJvb3REaXI+L3Rlc3Qvc2V0dXAuamVzdC5qcyddLFxuICBtb2R1bGVQYXRoczogWydub2RlX21vZHVsZXMnLCBgLi4vLi4vbm9kZV9tb2R1bGVzYF0sXG4gIGNvdmVyYWdlRGlyZWN0b3J5OiAnLi9jb3ZlcmFnZScsXG4gIG1vZHVsZU5hbWVNYXBwZXI6IHtcbiAgICAnXFxcXC4oanBnfGpwZWd8cG5nfGdpZnxlb3R8b3RmfHdlYnB8c3ZnfHR0Znx3b2ZmfHdvZmYyfG1wNHx3ZWJtfHdhdnxtcDN8bTRhfGFhY3xvZ2EpJCc6XG4gICAgICAnPHJvb3REaXI+L3Rlc3QvbW9ja3Mvc3R5bGVNb2NrLmpzJyxcbiAgICAnXFxcXC4oY3NzfGxlc3N8c2NzcykkJzogJzxyb290RGlyPi90ZXN0L21vY2tzL3N0eWxlTW9jay5qcycsXG4gICAgJ151aS8oLiopJzogJzxyb290RGlyPi8uLi8uLi9zcmMvbGVnYWN5L3VpL3B1YmxpYy8kMS8nLFxuICB9LFxuICBzbmFwc2hvdFNlcmlhbGl6ZXJzOiBbJy4uLy4uL25vZGVfbW9kdWxlcy9lbnp5bWUtdG8tanNvbi9zZXJpYWxpemVyJ10sXG4gIGNvdmVyYWdlUmVwb3J0ZXJzOiBbJ2xjb3YnLCAndGV4dCcsICdjb2JlcnR1cmEnXSxcbiAgdGVzdE1hdGNoOiBbJyoqLyoudGVzdC5qcycsICcqKi8qLnRlc3QudHMnLCAnKiovKi50ZXN0LnRzeCddLFxuICBjb3ZlcmFnZVBhdGhJZ25vcmVQYXR0ZXJuczogWyc8cm9vdERpcj4vYnVpbGQvJywgJzxyb290RGlyPi9ub2RlX21vZHVsZXMvJywgJzxyb290RGlyPi90ZXN0LyddLFxuICBjbGVhck1vY2tzOiB0cnVlLFxuICB0ZXN0UGF0aElnbm9yZVBhdHRlcm5zOiBbJzxyb290RGlyPi9idWlsZC8nLCAnPHJvb3REaXI+L25vZGVfbW9kdWxlcy8nXSxcbiAgbW9kdWxlUGF0aElnbm9yZVBhdHRlcm5zOiBbXSxcbiAgdGVzdEVudmlyb25tZW50OiAnamVzdC1lbnZpcm9ubWVudC1qc2RvbScsXG59O1xuIl19

@@ -1,0 +1,10 @@
+"use strict";
+
+require("core-js/modules/es.typed-array.set.js");
+
+/*
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+require('babel-polyfill');
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInNldHVwVGVzdHMudHMiXSwibmFtZXMiOlsicmVxdWlyZSJdLCJtYXBwaW5ncyI6Ijs7OztBQUFBO0FBQ0E7QUFDQTtBQUNBO0FBRUFBLE9BQU8sQ0FBQyxnQkFBRCxDQUFQIiwic291cmNlc0NvbnRlbnQiOlsiLypcbiAqIENvcHlyaWdodCBPcGVuU2VhcmNoIENvbnRyaWJ1dG9yc1xuICogU1BEWC1MaWNlbnNlLUlkZW50aWZpZXI6IEFwYWNoZS0yLjBcbiAqL1xuXG5yZXF1aXJlKCdiYWJlbC1wb2x5ZmlsbCcpO1xucmVxdWlyZSgnY29yZS1qcy9zdGFibGUnKTsgIl19

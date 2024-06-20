@@ -1,0 +1,35 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = createGeospatialCluster;
+
+var _geospatial_plugin = _interopRequireDefault(require("./geospatial_plugin"));
+
+var _constants = require("../services/utils/constants");
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+/*
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+function createGeospatialCluster(core, globalConfig) {
+  const {
+    customHeaders,
+    ...rest
+  } = globalConfig.opensearch;
+  return core.opensearch.legacy.createClient(_constants.CLUSTER.GEOSPATIAL, {
+    plugins: [_geospatial_plugin.default],
+    // Currently we are overriding any headers with our own since we explicitly required User-Agent to be OpenSearch Dashboards
+    // for integration with our backend plugin.
+    customHeaders: { ...customHeaders,
+      ..._constants.DEFAULT_HEADERS
+    },
+    ...rest
+  });
+}
+
+module.exports = exports.default;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImdlb3NwYXRpYWxfY2x1c3Rlci5qcyJdLCJuYW1lcyI6WyJjcmVhdGVHZW9zcGF0aWFsQ2x1c3RlciIsImNvcmUiLCJnbG9iYWxDb25maWciLCJjdXN0b21IZWFkZXJzIiwicmVzdCIsIm9wZW5zZWFyY2giLCJsZWdhY3kiLCJjcmVhdGVDbGllbnQiLCJDTFVTVEVSIiwiR0VPU1BBVElBTCIsInBsdWdpbnMiLCJHZW9zcGF0aWFsUGx1Z2luIiwiREVGQVVMVF9IRUFERVJTIl0sIm1hcHBpbmdzIjoiOzs7Ozs7O0FBS0E7O0FBQ0E7Ozs7QUFOQTtBQUNBO0FBQ0E7QUFDQTtBQUtlLFNBQVNBLHVCQUFULENBQWlDQyxJQUFqQyxFQUF1Q0MsWUFBdkMsRUFBcUQ7QUFDbEUsUUFBTTtBQUFFQyxJQUFBQSxhQUFGO0FBQWlCLE9BQUdDO0FBQXBCLE1BQTZCRixZQUFZLENBQUNHLFVBQWhEO0FBQ0EsU0FBT0osSUFBSSxDQUFDSSxVQUFMLENBQWdCQyxNQUFoQixDQUF1QkMsWUFBdkIsQ0FBb0NDLG1CQUFRQyxVQUE1QyxFQUF3RDtBQUM3REMsSUFBQUEsT0FBTyxFQUFFLENBQUNDLDBCQUFELENBRG9EO0FBRTdEO0FBQ0E7QUFDQVIsSUFBQUEsYUFBYSxFQUFFLEVBQUUsR0FBR0EsYUFBTDtBQUFvQixTQUFHUztBQUF2QixLQUo4QztBQUs3RCxPQUFHUjtBQUwwRCxHQUF4RCxDQUFQO0FBT0QiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogQ29weXJpZ2h0IE9wZW5TZWFyY2ggQ29udHJpYnV0b3JzXG4gKiBTUERYLUxpY2Vuc2UtSWRlbnRpZmllcjogQXBhY2hlLTIuMFxuICovXG5cbmltcG9ydCBHZW9zcGF0aWFsUGx1Z2luIGZyb20gJy4vZ2Vvc3BhdGlhbF9wbHVnaW4nO1xuaW1wb3J0IHsgQ0xVU1RFUiwgREVGQVVMVF9IRUFERVJTIH0gZnJvbSAnLi4vc2VydmljZXMvdXRpbHMvY29uc3RhbnRzJztcblxuZXhwb3J0IGRlZmF1bHQgZnVuY3Rpb24gY3JlYXRlR2Vvc3BhdGlhbENsdXN0ZXIoY29yZSwgZ2xvYmFsQ29uZmlnKSB7XG4gIGNvbnN0IHsgY3VzdG9tSGVhZGVycywgLi4ucmVzdCB9ID0gZ2xvYmFsQ29uZmlnLm9wZW5zZWFyY2g7XG4gIHJldHVybiBjb3JlLm9wZW5zZWFyY2gubGVnYWN5LmNyZWF0ZUNsaWVudChDTFVTVEVSLkdFT1NQQVRJQUwsIHtcbiAgICBwbHVnaW5zOiBbR2Vvc3BhdGlhbFBsdWdpbl0sXG4gICAgLy8gQ3VycmVudGx5IHdlIGFyZSBvdmVycmlkaW5nIGFueSBoZWFkZXJzIHdpdGggb3VyIG93biBzaW5jZSB3ZSBleHBsaWNpdGx5IHJlcXVpcmVkIFVzZXItQWdlbnQgdG8gYmUgT3BlblNlYXJjaCBEYXNoYm9hcmRzXG4gICAgLy8gZm9yIGludGVncmF0aW9uIHdpdGggb3VyIGJhY2tlbmQgcGx1Z2luLlxuICAgIGN1c3RvbUhlYWRlcnM6IHsgLi4uY3VzdG9tSGVhZGVycywgLi4uREVGQVVMVF9IRUFERVJTIH0sXG4gICAgLi4ucmVzdCxcbiAgfSk7XG59XG4iXX0=

@@ -1,0 +1,14 @@
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.routerComponentPropsMock = void 0;
+
+/*
+ * Copyright OpenSearch Contributors
+ * SPDX-License-Identifier: Apache-2.0
+ */
+const routerComponentPropsMock = jest.fn();
+exports.routerComponentPropsMock = routerComponentPropsMock;
+//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbInJvdXRlclByb3BzTW9jay50cyJdLCJuYW1lcyI6WyJyb3V0ZXJDb21wb25lbnRQcm9wc01vY2siLCJqZXN0IiwiZm4iXSwibWFwcGluZ3MiOiI7Ozs7Ozs7QUFBQTtBQUNBO0FBQ0E7QUFDQTtBQUlBLE1BQU1BLHdCQUF3QixHQUFHQyxJQUFJLENBQUNDLEVBQUwsRUFBakMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogQ29weXJpZ2h0IE9wZW5TZWFyY2ggQ29udHJpYnV0b3JzXG4gKiBTUERYLUxpY2Vuc2UtSWRlbnRpZmllcjogQXBhY2hlLTIuMFxuICovXG5cbmltcG9ydCB7IFJvdXRlQ29tcG9uZW50UHJvcHMgfSBmcm9tIFwicmVhY3Qtcm91dGVyLWRvbVwiO1xuXG5jb25zdCByb3V0ZXJDb21wb25lbnRQcm9wc01vY2sgPSBqZXN0LmZuKCkgYXMgdW5rbm93biBhcyBSb3V0ZUNvbXBvbmVudFByb3BzO1xuXG5leHBvcnQgeyByb3V0ZXJDb21wb25lbnRQcm9wc01vY2sgfTtcblxuIl19
